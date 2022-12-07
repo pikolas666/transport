@@ -64,7 +64,12 @@
               ">
            </div>
         
-        <datalist id="SizeSelect">
+        <datalist id="SizeSelect" onkeyup="
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+                this.value = this.value.toUpperCase();
+                this.setSelectionRange(start, end);
+              ">
             <option value='S'>
             <option value='M'>
         </datalist>
