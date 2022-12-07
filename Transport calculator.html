@@ -55,7 +55,13 @@
     
         <h2>Post.lt and (PS) Post.nl price calculator</h2>
         
-        <div class="Scountry"><input class="sizeInput" id="sizeInput" type="text" placeholder="select size S(up to 2cm height) or M" list="SizeSelect" /></div>    
+        <div class="Scountry"><input class="sizeInput" id="sizeInput" type="text" placeholder="select size S(up to 2cm height) or M" list="SizeSelect" onkeyup="
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+                this.value = this.value.toUpperCase();
+                this.setSelectionRange(start, end);
+               ">
+           </div>   
         <div class="Scountry"><input class="classipnput" placeholder="choose country code" list="CountryNamePost" id="CountryInputPost" type="text" onkeyup="
                 var start = this.selectionStart;
                 var end = this.selectionEnd;
@@ -64,12 +70,7 @@
               ">
            </div>
         
-        <datalist id="SizeSelect" onkeyup="
-                var start = this.selectionStart;
-                var end = this.selectionEnd;
-                this.value = this.value.toUpperCase();
-                this.setSelectionRange(start, end);
-              ">
+        <datalist id="SizeSelect" 
             <option value='S'>
             <option value='M'>
         </datalist>
