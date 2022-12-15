@@ -493,8 +493,8 @@
         obj.sort((a, b) => (a.price > b.price) ? 1 : -1)
         let filtered = results.sort((a, b) => (a.price > b.price) ? 1 : -1)
         let bestPrice = filtered[0]
-        
-        result.innerHTML = "Courier: " + bestPrice.courier + ", " + "Country: " + bestPrice.country + ", " + "Courier weight: " + bestPrice.weight + ", " + "Price: " + bestPrice.price.toFixed(2);
+        let secondBest = filtered[1]
+        result.innerHTML = "Courier: " + bestPrice.courier + ", " + "Country: " + bestPrice.country + ", " + "Courier weight: " + bestPrice.weight + ", " + "Price: " + bestPrice.price.toFixed(2) + " / second best price - " + secondBest.courier + " price " + secondBest.price; 
         
 
   
@@ -798,7 +798,10 @@
 objPost.sort((a, b) => (a.price > b.price) ? 1 : -1)
         let filteredPost = resultsPost.sort((a, b) => (a.price > b.price) ? 1 : -1)
         let bestPricePost = filteredPost[0]
-        resultpost.innerHTML = "Courier: " + bestPricePost.courier + ", " + "Country: " + bestPricePost.Country + ", " + "package size: " + bestPricePost.PackageSize +  ", " + "Courier weight: " + bestPricePost.weight + ", " + "Price: " + bestPricePost.price.toFixed(2);
+        let secondBestPost = filteredPost[1]
+        resultpost.innerHTML = "Courier: " + bestPricePost.courier + ", " + "Country: " + bestPricePost.Country + ", " + "package size: " 
+        + bestPricePost.PackageSize +  ", " + "Courier weight: " + bestPricePost.weight + ", " + "Price: " + bestPricePost.price.toFixed(2) + " / second best price - " +
+         secondBestPost.courier + " price " + secondBestPost.price; ;
         
         
       
