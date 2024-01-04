@@ -1,4 +1,4 @@
-const couriersURL = "http://127.0.0.1:3000/";
+const couriersURL = "https://transport-calculator-back-end.onrender.com/";
 const couriersEndpoint = "couriers";
 const usersEndpoint = "users";
 const postalServicesEndpoint = "postal-services";
